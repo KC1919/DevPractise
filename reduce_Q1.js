@@ -2,12 +2,14 @@
 
 let arr = [51, 23, 37, 44, 73, 82, 97, 75]
 
-let ans = arr.filter((val, ind, oarr) => check(val)).reduce((pv, cv) => {
+//first filter the prime numbers, then using reduce we count the prime numbers returned by filter function
+let ans = arr.filter((val, ind, oarr) => check(val)).reduce((pv) => {
     return pv + 1;
 }, 0);
 
 console.log(ans);
 
+//function to check for prime numbers
 function check(num) {
 
     let f = 0;
